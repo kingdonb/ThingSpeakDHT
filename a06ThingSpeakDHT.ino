@@ -11,8 +11,8 @@
 #define DHTPIN 5    // what digital pin we're connected to  pin2 to  D4 on esp board
 
 // Uncomment whatever DHT sensor type you're using!
-#define DHTTYPE DHT11  // DHT 11
-//#define DHTTYPE DHT21  // DHT 21
+//#define DHTTYPE DHT11  // DHT 11
+#define DHTTYPE DHT21  // DHT 21
 //#define DHTTYPE DHT22  // DHT 22
 
 DHT dht(DHTPIN,DHTTYPE);
@@ -28,7 +28,7 @@ const char* MY_PWD = "";
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(74880);
   dht.begin();
   Serial.print("Connecting to "+*MY_SSID);
   WiFi.begin(MY_SSID, MY_PWD);
