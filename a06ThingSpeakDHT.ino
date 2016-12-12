@@ -116,7 +116,7 @@ WiFiClient client;
           client.print("\n\n");
           client.print(tsData);
 
-          delay(1000);
+          delay(115200);
     } //end client connect
 
   else Serial.print("couldnt connect to ThingSpeak\n");  //if client connect failed
