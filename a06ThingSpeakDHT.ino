@@ -99,12 +99,12 @@ WiFiClient client;
                                    );
           
 
-          String tsData = "field1="   //need the length of our data string to give to ThingSpeak
+          String tsData = "field4="   //need the length of our data string to give to ThingSpeak
           +            (String) h
-          +"&field2=" +(String) t
-          +"&field3=" +(String) f
-          +"&field4=" +(String) hic
-          +"&field5=" +(String) hif;
+          +"&field5=" +(String) t
+          +"&field6=" +(String) f;
+//          +"&field4=" +(String) hic
+//          +"&field5=" +(String) hif;
 
           client.print("POST /update HTTP/1.1\n");  //alternate sans 'update'client.print(F(" HTTP/1.1\r\n"));
           client.print("Host: api.thingspeak.com\n");
@@ -116,7 +116,7 @@ WiFiClient client;
           client.print("\n\n");
           client.print(tsData);
 
-          delay(115200);
+          delay(230400);
     } //end client connect
 
   else Serial.print("couldnt connect to ThingSpeak\n");  //if client connect failed
