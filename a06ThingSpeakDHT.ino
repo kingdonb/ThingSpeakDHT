@@ -102,9 +102,9 @@ WiFiClient client;
           String tsData = "field1="   //need the length of our data string to give to ThingSpeak
           +            (String) h
           +"&field2=" +(String) t
-          +"&field3=" +(String) f
-          +"&field4=" +(String) hic
-          +"&field5=" +(String) hif;
+          +"&field3=" +(String) f;
+//          +"&field4=" +(String) hic
+//          +"&field5=" +(String) hif;
 
           client.print("POST /update HTTP/1.1\n");  //alternate sans 'update'client.print(F(" HTTP/1.1\r\n"));
           client.print("Host: api.thingspeak.com\n");
