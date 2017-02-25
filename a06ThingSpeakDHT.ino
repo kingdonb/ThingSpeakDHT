@@ -90,10 +90,10 @@ WiFiClient client;
           Serial.println("WiFi Client connected ");
 
           client.print(F("POST "));
-          client.print("/update?key=apiKey&field4="
+          client.print("/update?key=apiKey&field1="
           +            (String) h
-          +"&field5=" +(String) t
-          +"&field6=" +(String) f
+          +"&field2=" +(String) t
+          +"&field3=" +(String) f
 //          +"&field9=" +(String) hic
 //          +"&field10=" +(String) hif
                                    );
