@@ -106,7 +106,7 @@ WiFiClient client;
 //          +"&field4=" +(String) hic
 //          +"&field5=" +(String) hif;
 
-          client.print("POST /update HTTP/1.1\n");  //alternate sans 'update'client.print(F(" HTTP/1.1\r\n"));
+          client.print(F(" HTTP/1.1\r\n"));
           client.print("Host: api.thingspeak.com\n");
           client.print("Connection: close\n");
           client.print("X-THINGSPEAKAPIKEY: " + apiKey + "\n");
